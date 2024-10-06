@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins ,sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(132, 132, 198);
+    padding: 1.5rem 7.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 265px);
+    gap: 1rem;
+}
+.container .add-note, .container .note{
+    padding: 1rem;
+    width: 15rem;
+    height: 18rem;
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    background-color: wheat;
+}
+.container .add-note{
+    justify-content: center;
+}
+.container .note{
+    justify-content: space-between;
+}
+.add-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    border: 2px dashed blue;
+    border-radius: 50%;
+    font-size: 40px;
+    color: blue;
+    cursor: pointer;
+}
+.add-note p{
+    color: blue;
+    margin-top: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.note p{
+    font-size: 22px;
+    font-weight: bold;
+}
+.note span{
+    display: block;
+    margin-top: 5px;
+    color: gray;
+    font-size: 16px;
+    width: 13rem;
+}
+
+.btn-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.btn-content button{
+    width: 6rem;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.btn-content span{
+    padding: 0.5rem 0;
+    border-top: 1px solid hsl(0, 0%, 50%);
+    color: hsl(0, 0%, 70%);
+    font-size: 14px;
+}
+.bxs-edit-alt{
+    color: lightgreen;
+    margin-right: -2.5rem;
+}
+.bxs-trash{
+    color:red;
+    margin-left: -2.5rem;
+}
+.note .details{
+    font-size: 22px;
+    overflow-y: auto;
+}
+.poppup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0 ,0.4);
+    z-index: 2;
+}
+.poppup-box .poppup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    max-width: 400px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+.poppup-box .poppup .content{
+    width: calc(100% - 15px);
+    background-color: wheat;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.poppup-box .poppup ,.poppup-box{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.content header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1.5rem;
+}
+.content header p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.content header i{
+    color: gray;
+    cursor: pointer;
+    font-size: 27px;
+}
+.content .row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+.title input{
+    height: 2rem;
+}
+.description textarea{
+    height: 5rem;
+    resize: none;
+}
+.content form :where(input,textarea){
+    width: 100%;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+}
+.content .row label{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+.content form button{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(132, 132, 198);
+}
+
